@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(0,150,136);
+    background: linear-gradient(to bottom, rgba(0,150,136,1) 20%, rgba(214,219,215,1) 20%);
+}
+
+#app{
+    height: 100vh;
+}
+
+/* CONTAINER APP */
+
+#container{
+    width: 70vw;
+    display: flex;
+    margin: auto;
+    
+}
+
+
+/* CHATBOX */
+
+#chatBox{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+}
+
+/* LEFT NAVBAR */
+
+#leftNav{
+    background-color: aqua;
+    width: 30%;
+}
+
+
+/* CHATWINDOW */
+
+#chatWindow{
+    background-color: blueviolet;
+    flex-grow: 1;
+}
