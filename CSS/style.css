@@ -13,11 +13,26 @@ body{
     height: 100vh;
 }
 
+/********** GENERALI ***********/
+/* FLEX */
+
+.flex{
+    display: flex;
+}
+
+.alignCenter{
+    align-items: center;
+}
+
+/* PADDING */
+
+
+
+
 /* CONTAINER APP */
 
 #container{
-    width: 70vw;
-    display: flex;
+    width: 80vw;
     margin: auto;
     
 }
@@ -26,9 +41,9 @@ body{
 /* CHATBOX */
 
 #chatBox{
-    display: flex;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
+    padding: 20px 0px;
 }
 
 /* LEFT NAVBAR */
@@ -38,10 +53,45 @@ body{
     width: 30%;
 }
 
+#navProfile{
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #eaeaea;
+}
 
+#activeNotifica{
+    background-color: #8edafc;
+    padding: 10px;
+}
+
+#bellIcon{
+    background-color: white;
+    color: lightblue;
+    display: flex;
+    width: 13%;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.avatarBox{
+    width: 50px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.avatarBox > img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+#activeNotifica :last-of-type{
+    padding: 3px;
+}
 /* CHATWINDOW */
 
 #chatWindow{
     background-color: blueviolet;
     flex-grow: 1;
 }
+

@@ -4,15 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
-    <title>Boolzapp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="app">
-        <div id="container">
-            <div id="chatBox">
-                <div id="leftNav">Sofia</div>
+        <div id="container" class="flex">
+            <div id="chatBox" class="flex">
+                <div id="leftNav">
+                    <div id="navProfile" class="flex">
+                        <div class="flex alignCenter">
+                            <div class="avatarBox">
+                                <img src="./img/avatar_4.jpg" alt="">
+
+                            </div>
+                            <span>Sofia</span>
+                        </div>
+                        <div>Icons</div>
+                    </div>
+                    <div id="activeNotifica" class="flex">
+                        <div id="bellIcon" class="alignCenter">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div>
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <span>Attiva notifiche desktop</span>
+                        </div>
+
+                    </div>
+                </div>
                 <div id="chatWindow">Michele</div>
             </div>
 
