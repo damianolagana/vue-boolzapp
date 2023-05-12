@@ -30,12 +30,14 @@ body{
 
 /* WIDTH*/
 
-.w30{
-    width: 30%;
-}
+.w30{width: 30%;}
+.w80{width: 80%;}
+.w100{width: 100%;}
 
+/* PADDING */
 
-
+.p10px{padding: 10px;}
+.p5px{padding: 5px;}
 
 /* CONTAINER APP */
 
@@ -50,7 +52,6 @@ body{
 
 #chatBox{
     height: 100vh;
-    width: 100%;
     padding: 20px 0px;
 }
 
@@ -62,13 +63,11 @@ body{
 
 #navProfile{
     justify-content: space-between;
-    padding: 10px;
     background-color: #eaeaea;
 }
 
 #activeNotifica{
     background-color: #8edafc;
-    padding: 10px;
 }
 
 #bellIcon{
@@ -95,6 +94,19 @@ body{
 #activeNotifica :last-of-type{
     padding: 3px;
 }
+
+
+
+/* SEARCHTAB */
+#searchTab{
+    border: 6px solid #fafafa;
+    padding: 10px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center
+}
+
+
 /* CHATWINDOW */
 
 #chatWindow{
