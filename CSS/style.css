@@ -24,7 +24,15 @@ body{
     align-items: center;
 }
 
-/* PADDING */
+.justifyEven{
+    justify-content: space-evenly;
+}
+
+/* WIDTH*/
+
+.w30{
+    width: 30%;
+}
 
 
 
@@ -50,7 +58,6 @@ body{
 
 #leftNav{
     background-color: aqua;
-    width: 30%;
 }
 
 #navProfile{
