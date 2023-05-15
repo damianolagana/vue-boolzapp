@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(0,150,136);
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, rgba(0,150,136,1) 20%, rgba(214,219,215,1) 20%);
+}
+
+
+
+/********** GENERALI ***********/
+/* FLEX */
+
+.flex{
+    display: flex;
+}
+
+.alignCenter{
+    align-items: center;
+}
+
+.justifyEven{
+    justify-content: space-evenly;
+}
+
+.justifySBetween{
+    justify-content: space-between;
+}
+
+
+/* WIDTH*/
+
+.w10{width: 10%;}
+.w30{width: 30%;}
+.w80{width: 80%;}
+.w85{width: 85%;}
+.w100{width: 100%;}
+
+/* PADDING */
+
+.p10px{padding: 10px;}
+.p5px{padding: 5px;}
+
+/* CONTAINER APP */
+
+#container{
+    width: 80vw;
+    margin: auto;
+    height: 100vh;
+    
+}
+
+
+/* CHATBOX */
+
+#chatBox{
+    height: 100vh;
+    padding: 20px 0px;
+}
+
+/* LEFT NAVBAR */
+
+#leftNav{
+   background-color: white;
+    flex-direction: column;
+}
+
+#navProfile{
+    justify-content: space-between;
+    background-color: #eaeaea;
+}
+
+#activeNotifica{
+    background-color: #8edafc;
+}
+
+#bellIcon{
+    background-color: white;
+    color: lightblue;
+    display: flex;
+    width: 13%;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.avatarBox{
+    width: 50px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.avatarBox > img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+#activeNotifica :last-of-type{
+    padding: 3px;
+}
+
+
+/* SEARCHTAB */
+#searchTab{
+    border: 6px solid #fafafa;
+    padding: 10px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center
+}
+
+/* CHAT HISTORY */
+#chatHistory{
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+#chatHistory > div{
+    border-top: 1px solid #e9e5e5;
+}
+
+
+/* CHATWINDOW */
+
+#chatWindow{
+    background-color: #eaeaea;
+    flex-grow: 1;
+}
+
+#chatWindow > div{
+    border-left: 1px solid #d6d6d6;
+}
+
+#mainChat{
+    background-image: url(../img/mine.jpg);
+    height: 85%;
+    overflow-y: scroll;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+#writeMessage{
+    padding: 10px 20px;
+    height: 7%;
+}
+
+#writeMessage i{
+    font-size: 25px;
+    color: #6b7376;
+}
+
+#writeMessage input{
+    height: 40px;
+    border: none;
+}
+
+.message{
+    padding: 10px;
+    margin: 10px;
+    width: auto;
+    border-radius: 5%;
+}
+
+.messageSent{
+    align-self: flex-end;
+    background-color: #D5F9BA;
+}
+
+.messageReceived{
+    align-self: flex-start;
+    background-color: white ;
+}

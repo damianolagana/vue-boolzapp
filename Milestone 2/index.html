@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <div id="container" class="flex">
+            <div id="chatBox" class="flex w100">
+                <div id="leftNav" class="w30 flex">
+                    <div>
+                        <div id="navProfile" class="flex alignCenter p10px">
+                            <div class="flex alignCenter">
+                                <div class="avatarBox">
+                                    <img :src="currentUser.avatar" alt="">
+    
+                                </div>
+                                <span>{{currentUser.name}}</span>
+                            </div>
+                            <div class="flex w30 justifyEven">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+
+                        <div id="activeNotifica" class="flex p10px">
+                            <div id="bellIcon" class="alignCenter">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div>
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <span>Attiva notifiche desktop</span>
+                            </div>
+    
+                        </div>
+
+                        <div id="searchTab" class="flex">
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass p5px"></i>
+                            </div>
+                            <div class="w80">
+                                <input class="w100" type="text" placeholder="Cerca o inizia una nuova chat">
+    
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="chatHistory">
+                        <div v-for="(contact,i) in contacts" class="flex p10px justifySBetween">
+                            <div class="avatarBox">
+                                <img :src="contact.avatar" alt="">
+                            </div>
+                            <div>
+                                <div>{{contact.name}}</div>
+                                <div>ultimo messaggio inviato</div>
+                                
+                            </div>
+                            <div>
+                                <span>12.00</span>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="chatWindow">
+                    <div class="flex p10px justifySBetween alignCenter">
+                        <div class="avatarBox">
+                            <img src="./img/avatar_1.jpg" alt="">
+                        </div>
+                        <div class="w80">
+                            <div>Michele</div>
+                            <div>ultimo accesso oggi alle 12:00</div>
+
+                        </div>
+                        <div class="flex justifySBetween alignCenter w10">
+                            <i class="fa-solid fa-magnifying-glass p5px"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                        </div>
+
+                    </div>
+                    <div id="mainChat" class="flex">
+                        <div class="messageSent message">
+                            Messaggio inviato
+                        </div>
+                        <div class="messageReceived message">
+                            Messaggio ricevuto
+                        </div>
+                        
+                    </div>
+                    <div id="writeMessage" class="flex justifySBetween alignCenter">
+                        <div>
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                        <div class="w85">
+                            <input class="w100 p10px" type="text" placeholder="Scrivi un messaggio">
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="./JS/main.js"></script>
+</body>
+</html>
