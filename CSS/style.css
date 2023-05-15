@@ -9,9 +9,7 @@ body{
     background: linear-gradient(to bottom, rgba(0,150,136,1) 20%, rgba(214,219,215,1) 20%);
 }
 
-#app{
-    height: 100vh;
-}
+
 
 /********** GENERALI ***********/
 /* FLEX */
@@ -27,6 +25,11 @@ body{
 .justifyEven{
     justify-content: space-evenly;
 }
+
+.justifySBetween{
+    justify-content: space-between;
+}
+
 
 /* WIDTH*/
 
@@ -44,6 +47,7 @@ body{
 #container{
     width: 80vw;
     margin: auto;
+    height: 100vh;
     
 }
 
@@ -59,6 +63,7 @@ body{
 
 #leftNav{
     background-color: aqua;
+    flex-direction: column;
 }
 
 #navProfile{
@@ -96,7 +101,6 @@ body{
 }
 
 
-
 /* SEARCHTAB */
 #searchTab{
     border: 6px solid #fafafa;
@@ -105,6 +109,13 @@ body{
     justify-content: space-between;
     align-items: center
 }
+
+/* CHAT HISTORY */
+#chatHistory{
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
 
 
 /* CHATWINDOW */

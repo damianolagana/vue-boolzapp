@@ -13,52 +13,62 @@
     <div id="app">
         <div id="container" class="flex">
             <div id="chatBox" class="flex w100">
-                <div id="leftNav" class="w30">
-                    <div id="navProfile" class="flex alignCenter p10px">
-                        <div class="flex alignCenter">
-                            <div class="avatarBox">
-                                <img src="./img/avatar_4.jpg" alt="">
-
+                <div id="leftNav" class="w30 flex">
+                    <div>
+                        <div id="navProfile" class="flex alignCenter p10px">
+                            <div class="flex alignCenter">
+                                <div class="avatarBox">
+                                    <img :src="currentUser.avatar" alt="">
+    
+                                </div>
+                                <span>{{currentUser.name}}</span>
                             </div>
-                            <span>Sofia</span>
-                        </div>
-                        <div class="flex w30 justifyEven">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                    </div>
-                    <div id="activeNotifica" class="flex p10px">
-                        <div id="bellIcon" class="alignCenter">
-                            <i class="fa-solid fa-bell-slash"></i>
-                        </div>
-                        <div>
-                            <p>Ricevi notifiche di nuovi messaggi</p>
-                            <span>Attiva notifiche desktop</span>
+                            <div class="flex w30 justifyEven">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
                         </div>
 
-                    </div>
-                    <div id="searchTab" class="flex">
-                        <div>
-                            <i class="fa-solid fa-magnifying-glass p5px"></i>
-                        </div>
-                        <div class="w80">
-                            <input class="w100" type="text" placeholder="Cerca o inizia una nuova chat">
-
-                        </div>
-                    </div>
-                    <div id="chatHistory">
-                        <div class="flex p10px">
-                            <div class="avatarBox">
-                                <img src="./img/avatar_1.jpg" alt="">
+                        <div id="activeNotifica" class="flex p10px">
+                            <div id="bellIcon" class="alignCenter">
+                                <i class="fa-solid fa-bell-slash"></i>
                             </div>
                             <div>
-                                <span>Michele</span>
-                                <span>ultimo messaggio inviato</span>
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <span>Attiva notifiche desktop</span>
+                            </div>
+    
+                        </div>
+
+                        <div id="searchTab" class="flex">
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass p5px"></i>
+                            </div>
+                            <div class="w80">
+                                <input class="w100" type="text" placeholder="Cerca o inizia una nuova chat">
+    
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="chatHistory">
+                        <div v-for="(contact,i) in contacts" class="flex p10px justifySBetween">
+                            <div class="avatarBox">
+                                <img :src="contact.avatar" alt="">
+                            </div>
+                            <div>
+                                <div>{{contact.name}}</div>
+                                <div>ultimo messaggio inviato</div>
                                 
                             </div>
-                            <span>12.00</span>
+                            <div>
+                                <span>12.00</span>
+                                
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
                 <div id="chatWindow">Michele</div>
