@@ -123,6 +123,19 @@ body{
     border-top: 1px solid #e9e5e5;
 }
 
+.contactChat{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.contactChat:hover{
+    background-color: #eee;
+}
+
+.currentChatColor{
+    background-color: #ddd;
+}
 
 /* CHATWINDOW */
 

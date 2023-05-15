@@ -186,6 +186,13 @@ createApp({
         displayContactChat(i){
             this.currentChat=i
 
+        },
+        currentChatClass(i){
+            let chatClass = ""
+            if(this.currentChat==i){
+                chatClass="currentChatColor"
+            }
+            return chatClass
         }
     }
 }).mount("#app")

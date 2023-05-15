@@ -54,7 +54,7 @@
 
 
                     <div id="chatHistory">
-                        <div v-for="(contact,i) in contacts" class="flex p10px justifySBetween" @click="displayContactChat(i)">
+                        <div v-for="(contact,i) in contacts" class="contactChat" :class="currentChatClass(i)" @click="displayContactChat(i)">
                             <div class="avatarBox">
                                 <img :src="contact.avatar" alt="">
                             </div>
