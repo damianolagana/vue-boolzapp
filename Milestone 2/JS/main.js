@@ -3,6 +3,7 @@ const{createApp} = Vue
 createApp({
     data(){
         return{
+            currentChat: 0,
             currentUser:{
                 name: "Damiano",
                 avatar: "./img/avatar_io.jpg"
@@ -181,6 +182,10 @@ createApp({
                 messageClass = "messageReceived"
             }
             return messageClass
+        },
+        displayContactChat(i){
+            this.currentChat=i
+
         }
     }
 }).mount("#app")
