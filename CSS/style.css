@@ -138,6 +138,8 @@ body{
     background-image: url(../img/mine.jpg);
     height: 85%;
     overflow-y: scroll;
+    flex-direction: column;
+    padding: 0 30px;
 }
 
 #writeMessage{
@@ -153,4 +155,21 @@ body{
 #writeMessage input{
     height: 40px;
     border: none;
+}
+
+.message{
+    padding: 10px;
+    margin: 10px;
+    width: auto;
+    border-radius: 5%;
+}
+
+.messageSent{
+    align-self: flex-end;
+    background-color: #D5F9BA;
+}
+
+.messageReceived{
+    align-self: flex-start;
+    background-color: white ;
 }
