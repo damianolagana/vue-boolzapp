@@ -175,6 +175,12 @@ createApp({
         }
     },
     methods: {
-
+        getMessageClass(message){
+            let messageClass = "messageSent";
+            if(message.status == "received"){
+                messageClass = "messageReceived"
+            }
+            return messageClass
+        }
     }
 }).mount("#app")

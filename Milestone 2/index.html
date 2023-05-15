@@ -96,7 +96,7 @@
                         <div class="messageReceived message">
                             Messaggio ricevuto
                         </div> -->
-                        <div v-for="message in contacts[0].messages" class="message messageSent">
+                        <div v-for="message in contacts[1].messages" class="message" :class="getMessageClass(message)">
                             {{message.message}}
                         </div>                        
                     </div>
