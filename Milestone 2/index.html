@@ -90,13 +90,15 @@
 
                     </div>
                     <div id="mainChat" class="flex">
-                        <div class="messageSent message">
+                        <!-- <div class="messageSent message">
                             Messaggio inviato
                         </div>
                         <div class="messageReceived message">
                             Messaggio ricevuto
-                        </div>
-                        
+                        </div> -->
+                        <div v-for="message in contacts[0].messages" class="message messageSent">
+                            {{message.message}}
+                        </div>                        
                     </div>
                     <div id="writeMessage" class="flex justifySBetween alignCenter">
                         <div>
