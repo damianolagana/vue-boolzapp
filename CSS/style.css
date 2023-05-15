@@ -33,8 +33,10 @@ body{
 
 /* WIDTH*/
 
+.w10{width: 10%;}
 .w30{width: 30%;}
 .w80{width: 80%;}
+.w85{width: 85%;}
 .w100{width: 100%;}
 
 /* PADDING */
@@ -62,7 +64,7 @@ body{
 /* LEFT NAVBAR */
 
 #leftNav{
-    background-color: aqua;
+   background-color: white;
     flex-direction: column;
 }
 
@@ -113,15 +115,42 @@ body{
 /* CHAT HISTORY */
 #chatHistory{
     flex-grow: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
+#chatHistory > div{
+    border-top: 1px solid #e9e5e5;
+}
 
 
 /* CHATWINDOW */
 
 #chatWindow{
-    background-color: blueviolet;
+    background-color: #eaeaea;
     flex-grow: 1;
 }
 
+#chatWindow > div{
+    border-left: 1px solid #d6d6d6;
+}
+
+#mainChat{
+    background-image: url(../img/mine.jpg);
+    height: 85%;
+    overflow-y: scroll;
+}
+
+#writeMessage{
+    padding: 10px 20px;
+    height: 7%;
+}
+
+#writeMessage i{
+    font-size: 25px;
+    color: #6b7376;
+}
+
+#writeMessage input{
+    height: 40px;
+    border: none;
+}
