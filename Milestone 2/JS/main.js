@@ -3,6 +3,13 @@ const{createApp} = Vue
 createApp({
     data(){
         return{
+            automaticMessage: null,
+
+            messageReceived:{
+                message:"ok",
+                status:"received",
+            },
+
             newMessage:{
                 message:"",
                 status:"sent",
@@ -203,6 +210,14 @@ createApp({
             let addMessage = {...this.newMessage};
             this.contacts[this.currentChat].messages.push(addMessage);
             this.newMessage.message = "";
+        },
+        receiveNewMessage(){
+            this.automaticMessage=setInterval(()=>{
+                let newReceivedMessage = {...this.messageReceived};
+                this.contacts[this.currentChat].messages.push(newReceivedMessage);
+            },1000);
+            // clearInterval(this.automaticMessage);
+            
         }
     }
 }).mount("#app")
