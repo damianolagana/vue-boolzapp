@@ -199,9 +199,9 @@ createApp({
             }
             return chatClass
         },
-        addNewMessage(currentChat){
+        addNewMessage(){
             let addMessage = {...this.newMessage};
-            this.contacts[currentChat].messages.push(addMessage);
+            this.contacts[this.currentChat].messages.push(addMessage);
             this.newMessage.message = "";
         }
     }
