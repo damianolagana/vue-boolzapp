@@ -6,7 +6,6 @@ createApp({
 
             searchTerm : "",
 
-            automaticMessage: null,
 
             messageReceived:{
                 message:"ok",
@@ -215,17 +214,17 @@ createApp({
             this.newMessage.message = "";
         },
         receiveNewMessage(){
-            this.automaticMessage=setInterval(()=>{
+            setTimeout(()=>{
                 let newReceivedMessage = {...this.messageReceived};
                 this.contacts[this.currentChat].messages.push(newReceivedMessage);
             },1000);
-            // clearInterval(this.automaticMessage);
+            
             
         },
         searchChat(){
             this.contacts.map(contact =>{
                 if(contact.include(this.searchTerm)){
-                    
+
                 }
             })
         }
