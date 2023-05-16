@@ -3,6 +3,9 @@ const{createApp} = Vue
 createApp({
     data(){
         return{
+
+            searchTerm : "",
+
             automaticMessage: null,
 
             messageReceived:{
@@ -218,6 +221,14 @@ createApp({
             },1000);
             // clearInterval(this.automaticMessage);
             
+        },
+        searchChat(){
+            this.contacts.map(contact =>{
+                if(contact.include(this.searchTerm)){
+                    
+                }
+            })
         }
-    }
+    },
+   
 }).mount("#app")

@@ -46,7 +46,7 @@
                                 <i class="fa-solid fa-magnifying-glass p5px"></i>
                             </div>
                             <div class="w80">
-                                <input class="w100" type="text" placeholder="Cerca o inizia una nuova chat">
+                                <input @keyup="searchChat" v-model="searchTerm" class="w100" type="text" placeholder="Cerca o inizia una nuova chat">
     
                             </div>
                         </div>
