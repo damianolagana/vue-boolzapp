@@ -3,6 +3,11 @@ const{createApp} = Vue
 createApp({
     data(){
         return{
+            newMessage:{
+                message:"",
+                status:"sent",
+            },
+
             currentChat: 0,
             currentUser:{
                 name: "Damiano",
@@ -193,6 +198,11 @@ createApp({
                 chatClass="currentChatColor"
             }
             return chatClass
+        },
+        addNewMessage(currentChat){
+            let addMessage = {...this.newMessage};
+            this.contacts[currentChat].messages.push(addMessage);
+            this.newMessage.message = "";
         }
     }
 }).mount("#app")

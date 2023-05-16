@@ -105,7 +105,7 @@
                             <i class="fa-solid fa-face-smile"></i>
                         </div>
                         <div class="w85">
-                            <input class="w100 p10px" type="text" placeholder="Scrivi un messaggio">
+                            <input @keyup.enter="addNewMessage(currentChat)" v-model="newMessage.message" class="w100 p10px" type="text" placeholder="Scrivi un messaggio">
                         </div>
                         <div>
                             <i class="fa-solid fa-microphone"></i>
