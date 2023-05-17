@@ -19,8 +19,20 @@ body{
     display: flex;
 }
 
+.flexColumn{
+    flex-direction: column;
+}
+
+.alignSelfEnd{
+    align-self: flex-end;
+}
+
 .alignCenter{
     align-items: center;
+}
+
+.justifyContCenter{
+    justify-content: center;
 }
 
 .justifyEven{
@@ -31,11 +43,16 @@ body{
     justify-content: space-between;
 }
 
+/* HEIGHT */
+.height100{
+    height: 100%;
+}
 
 /* WIDTH*/
 
 .w10{width: 10%;}
 .w30{width: 30%;}
+.w65{width: 65%;}
 .w80{width: 80%;}
 .w85{width: 85%;}
 .w100{width: 100%;}
@@ -44,6 +61,18 @@ body{
 
 .p10px{padding: 10px;}
 .p5px{padding: 5px;}
+
+/* COLOR */
+.greyIcon{
+    color: #6b7376;
+}
+
+/* FONT */
+.fontSize10px{font-size: 10px;}
+.fontSize12px{font-size: 12px;}
+
+
+
 
 /* CONTAINER APP */
 
@@ -107,11 +136,26 @@ body{
 /* SEARCHTAB */
 #searchTab{
     border: 6px solid #fafafa;
-    padding: 10px;
     background-color: white;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    height: 50px;
 }
+
+#searchLeft input{
+    border: none;
+    padding-left: 15px;
+}
+
+.lensIcon{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /* CHAT HISTORY */
 #chatHistory{
@@ -174,8 +218,9 @@ body{
 .message{
     padding: 10px;
     margin: 10px;
-    width: auto;
+    width: 40%;
     border-radius: 5%;
+    height: auto;
 }
 
 .messageSent{
